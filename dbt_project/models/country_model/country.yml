@@ -1,0 +1,16 @@
+
+version: 2
+
+models:
+  - name: countries
+    description: "A custom country model"
+    columns:
+      - name: Country_name
+        description: "The Description field for this model"
+        tests:
+          - unique
+          - not_null
+          - country_name
+          
+
+  
