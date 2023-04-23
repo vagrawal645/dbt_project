@@ -24,6 +24,9 @@ clean-targets:         # directories to be removed by `dbt clean`
   - "target"
   - "dbt_modules"
 
+# This will run every time dbt run command is executed
+on-run-start: "{{Logs_macro('DBT_RUN_START')}}" 
+on-run-end: "{{Logs_macro('DBT_RUN_END')}}"
 
 # Configuring models
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
@@ -32,6 +35,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 # as tables. These settings can be overridden in the individual model files
 # using the `{{ config(...) }}` macro.
 models:
+# This will run once for each dbt model run command is executed
   dbt_project:
     # Config indicated by + and applies to all files under models/example/
     example:
