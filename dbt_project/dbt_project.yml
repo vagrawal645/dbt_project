@@ -39,3 +39,6 @@ models:
     new_model:
       +schema: Transformed_data
       +materialized: table
+
+vars:
+  my_country : India
