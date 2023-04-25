@@ -6,7 +6,7 @@ models:
     description: "A custom country model"
     columns:
       - name: Country_name
-        description: "The Description field for this model"
+        description: '{{doc("table_events")}}'
         tests:
           - unique
           - not_null
